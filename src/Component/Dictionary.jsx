@@ -29,13 +29,19 @@ const Dictionary = () => {
   ];
 
   function handleSearch() {
- for(let i=0;i<arr.length;i++){
-    if(arr[i].word.toLowerCase()===(searchText.toLowerCase())){
-       return setIsMeaningAvailable(arr[i].meaning);
+//  for(let i=0;i<arr.length;i++){
+//     if(arr[i].word.toLowerCase()===(searchText.toLowerCase())){
+//         setIsMeaningAvailable(arr[i].meaning);
         
-    }
- }
- setIsMeaningAvailable('Word not found in the dictionary')
+//     }
+//  }
+// const searchTermLower = searchTerm.toLowerCase();
+const searchTermLower = searchText.toLowerCase();
+const findWord = arr.find(
+      (item) => item.word.toLowerCase() === searchTermLower
+    );
+    setIsMeaningAvailable(findWord ? findWord.meaning : "Word not found in the dictionary.")
+//  setIsMeaningAvailable('Word not found in the dictionary')
     
   }
   // console.log(isMeaningAvailable);
