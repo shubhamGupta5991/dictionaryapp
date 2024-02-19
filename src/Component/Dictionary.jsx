@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 const Dictionary = () => {
   const [searchText, setSearchText] = useState("");
-  const [isWrong,setIsWrong] = useState('');
+  
   const [isMeaningAvailable, setIsMeaningAvailable] = useState
   ("");
-//   const isWrong = 'Word not found in dictionary'
+
 
   let arr = [
     {
@@ -21,6 +21,10 @@ const Dictionary = () => {
     {
       word: "State",
       meaning: "An object that stores data for a component.",
+    },
+    {
+      word: "Javascript",
+      meaning: "A core programming language for web development.",
     },
   ];
 
@@ -45,10 +49,10 @@ const Dictionary = () => {
         onChange={(e) => setSearchText(e.target.value)}
       />
       <button onClick={handleSearch}>Search</button>
-      <br />
+      
       <p>
         Definition: <br />
-        {isMeaningAvailable?isMeaningAvailable:isWrong}
+        {isMeaningAvailable}
       </p>
     </div>
   );
