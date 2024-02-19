@@ -29,13 +29,8 @@ const Dictionary = () => {
   ];
 
   function handleSearch() {
-//  for(let i=0;i<arr.length;i++){
-//     if(arr[i].word.toLowerCase()===(searchText.toLowerCase())){
-//         setIsMeaningAvailable(arr[i].meaning);
-        
-//     }
-//  }
-// const searchTermLower = searchTerm.toLowerCase();
+
+
 const searchTermLower = searchText.toLowerCase();
 const findWord = arr.find(
       (item) => item.word.toLowerCase() === searchTermLower
