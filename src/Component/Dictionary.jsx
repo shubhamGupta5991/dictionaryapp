@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 
 const Dictionary = () => {
-  const [searchText, setSearchText] = useState("");
-  
-  const [isMeaningAvailable, setIsMeaningAvailable] = useState
-  ("");
-
-
   let arr = [
     {
       word: "React",
@@ -27,12 +21,20 @@ const Dictionary = () => {
       meaning: "A core programming language for web development.",
     },
   ];
+  const [searchText, setSearchText] = useState("");
+  const [dictionary,setDictionary] = useState(arr)
+  
+  const [isMeaningAvailable, setIsMeaningAvailable] = useState
+  ("");
+
+
+ 
 
   const handleSearch=()=> {
 
 
 const searchTermLower = searchText.toLowerCase();
-const findWord = arr.find(
+const findWord = dictionary.find(
       (item) => item.word.toLowerCase() === searchTermLower
     );
     setIsMeaningAvailable(findWord ? findWord.meaning : "Word not found in the dictionary.")
