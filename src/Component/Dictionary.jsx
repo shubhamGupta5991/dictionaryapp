@@ -46,6 +46,7 @@ const findWord = arr.find(
       <h1>Dictionary App</h1>
       <input
         type="text"
+        placeholder="Search for a word..."
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
       />
