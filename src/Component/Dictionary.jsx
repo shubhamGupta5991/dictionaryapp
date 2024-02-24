@@ -42,21 +42,39 @@ const findWord = arr.find(
   // console.log(isMeaningAvailable);
 
   return (
-    <div>
-      <h1>Dictionary App</h1>
-      <input
-        type="text"
-        placeholder="Search for a word..."
-        value={searchText}
-        onChange={(e) => setSearchText(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
+    // <div>
+    //   <h1>Dictionary App</h1>
+    //   <input
+    //     type="text"
+    //     placeholder="Search for a word..."
+    //     value={searchText}
+    //     onChange={(e) => setSearchText(e.target.value)}
+    //   />
+    //   <button onClick={handleSearch}>Search</button>
       
-      <p>
-        Definition: <br />
-        {isMeaningAvailable}
-      </p>
-    </div>
+    //   <p>
+    //     Definition: <br />
+    //     {isMeaningAvailable}
+    //   </p>
+    // </div>
+    <div>
+        <h1>Dictionary App</h1>
+        <div >
+          <input
+            type="text"
+            placeholder="Search for a word..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+          <button onClick={handleSearch}>
+            Search
+          </button>
+        </div>
+        <div >
+          <p>Definition:</p>
+          {isMeaningAvailable !== null && <p>{isMeaningAvailable}</p>}
+        </div>
+      </div>
   );
 };
 
