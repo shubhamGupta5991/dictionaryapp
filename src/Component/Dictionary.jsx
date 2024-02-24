@@ -28,7 +28,7 @@ const Dictionary = () => {
     },
   ];
 
-  function handleSearch() {
+  const handleSearch=()=> {
 
 
 const searchTermLower = searchText.toLowerCase();
